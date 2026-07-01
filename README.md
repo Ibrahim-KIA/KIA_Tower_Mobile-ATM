@@ -24,17 +24,22 @@ Pop open your terminal, navigate to your ROS 2 workspace, and pull down the code
 ```bash
 cd ~/ros2_ws/src
 git clone [https://github.com/Ibrahim-KIA/KIA_Tower_Mobile-ATM.git](https://github.com/Ibrahim-KIA/KIA_Tower_Mobile-ATM.git) ATM_description
-Now, head back to the root of your workspace and build the package:
+```
 
-Bash
+Now, head back to the root of your workspace and build the package:
+```Bash
 cd ~/ros2_ws
 colcon build --packages-select ATM_description
 source install/setup.bash
+```
+
 2. Spawn the Robot
 Let's drop the ATM into the Gazebo matrix. Run the launch file:
 
-Bash
+```Bash
 ros2 launch ATM_description gazebo.launch.py
+```
+
 Wait a few seconds for Gazebo to spin up. You should see the fully rendered ATM robot drop perfectly onto the grid!
 
 🎮 The Fun Part: Let's Drive!
@@ -42,16 +47,26 @@ What is a robot if you can't drive it? The ATM is equipped with a diff_drive Gaz
 
 Leave Gazebo running, open a brand new terminal window, and run the teleop node:
 
-Bash
+```Bash
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+
 ⌨️ Controls
 Make sure your terminal window is selected (clicked on), and use these keys to drive the robot like a classic arcade game:
 
 i : Move Forward
 
-k : STOP (Hit the brakes!)
+u : Forward Left
+
+o : Forward Right
+
+k or any other key: STOP (Hit the brakes!)
 
 , : Move Backward
+
+m : Backward left
+
+. : Backward Right
 
 j : Spin Left
 
@@ -62,7 +77,7 @@ Pro-tip: You can press q / z to increase or decrease your max speed if you want 
 🧠 Behind the Scenes (For the Nerds)
 If you peek under the hood at the atm_gazebo.xacro file, you'll see some serious physics engineering:
 
-Collision Spheres: We wrapped the complex wheel STLs in simple invisible spheres to keep the simulation running lightning-fast without melting your CPU.
+Collision Spheres: I wrapped the complex wheel STLs in simple invisible spheres to keep the simulation running lightning-fast without melting your CPU.
 
 Balanced Dynamics: Friction (mu1/mu2) and contact stiffness (kp) are mathematically balanced to prevent Gazebo's ODE solver from locking up (goodbye, numerical gridlock).
 
