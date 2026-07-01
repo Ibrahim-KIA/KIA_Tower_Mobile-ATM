@@ -23,7 +23,7 @@ Pop open your terminal, navigate to your ROS 2 workspace, and pull down the code
 
 ```bash
 cd ~/ros2_ws/src
-git clone [https://github.com/Ibrahim-KIA/KIA_Tower_Mobile-ATM.git](https://github.com/Ibrahim-KIA/KIA_Tower_Mobile-ATM.git) ATM_description
+git clone https://github.com/Ibrahim-KIA/KIA_Tower_Mobile-ATM.git ATM_description
 ```
 
 Now, head back to the root of your workspace and build the package:
