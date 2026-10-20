@@ -3,8 +3,8 @@
 <package format="3">
   <name>ATM_description</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="user@todo.todo">user</maintainer>
+  <description>ROS 2 description and Gazebo Classic simulation of the Aurora Tower Mobile (ATM), with mesh-based visuals, differential-drive control, odometry, and tuned wheel and caster contact parameters.</description>
+  <maintainer email="iabdulwahab298@gmail.com">Ibrahim Abdulwahab</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
