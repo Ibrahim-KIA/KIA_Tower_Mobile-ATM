@@ -5,7 +5,7 @@
   <version>0.0.0</version>
   <description>ROS 2 description and Gazebo Classic simulation of the Aurora Tower Mobile (ATM), with mesh-based visuals, differential-drive control, odometry, and tuned wheel and caster contact parameters.</description>
   <maintainer email="iabdulwahab298@gmail.com">Ibrahim Abdulwahab</maintainer>
-  <license>TODO: License declaration</license>
+  <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
